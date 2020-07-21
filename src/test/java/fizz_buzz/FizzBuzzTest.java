@@ -20,4 +20,28 @@ public class FizzBuzzTest {
         String spokenWord = underTest.say(1);
         assertThat(spokenWord).isEqualTo("1");
     }
+    @Test
+    public void whenGiven2FizzBuzzSays2() {
+        FizzBuzz underTest = new FizzBuzz();
+        String spokenWord = underTest.say(2);
+        assertThat(spokenWord).isEqualTo("2");
+    }
+    @Test
+    public void whenGiven3FizzBuzzSays3() {
+        FizzBuzz underTest = new FizzBuzz();
+        String spokenWord = underTest.say(3);
+        assertThat(spokenWord).isEqualTo("Fizz");
+    }
+    @Test
+    public void whenGiven4FizzBuzzSays4() {
+        FizzBuzz underTest = new FizzBuzz();
+        String spokenWord = underTest.say(4);
+        assertThat(spokenWord).isEqualTo("4");
+    }
+    @Test
+    public void whenGiven5FizzBuzzSays5() {
+        FizzBuzz underTest = new FizzBuzz();
+        String spokenWord = underTest.say(5);
+        assertThat(spokenWord).isEqualTo("Buzz");
+    }
 }
