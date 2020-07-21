@@ -14,7 +14,23 @@ package triangles;
 //        Cannot be made into a triangle. (example: 2, 3, 5) [Warning: might look isosceles at first glance.]
 //        The order in which the segments are supplied must not affect the result.
 public class TriangleSorter {
+
     public String analyze(int sideA, int sideB, int sideC) {
-        return "";
+        if (sideA == sideB && sideB == sideC && sideC ==sideA){
+            return "Equilateral";
+        }
+        if (sideA ==sideB ) {
+            return "Isosceles";
+        }
+        if (printedNumber % 5 == 0) {
+            return "Right";
+        }
+        if (printedNumber % 5 == 0) {
+            return "Still a Triangle, but not one of the three.";
+        }
+        if (printedNumber % 5 == 0) {
+            return "Cannot be made into a triangle.";
+        }
+        return "" + printedNumber;
     }
 }
