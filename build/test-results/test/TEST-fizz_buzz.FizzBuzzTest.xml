@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="fizz_buzz.FizzBuzzTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-07-21T21:54:59" hostname="DESKTOP-972ITF1" time="0.465">
+<testsuite name="fizz_buzz.FizzBuzzTest" tests="8" skipped="0" failures="0" errors="0" timestamp="2020-07-21T22:04:54" hostname="DESKTOP-972ITF1" time="0.793">
   <properties/>
-  <testcase name="whenGiven6FizzBuzzSays6()" classname="fizz_buzz.FizzBuzzTest" time="0.465"/>
+  <testcase name="whenGiven3FizzBuzzSays3()" classname="fizz_buzz.FizzBuzzTest" time="0.559"/>
+  <testcase name="whenGiven10FizzBuzzSays10()" classname="fizz_buzz.FizzBuzzTest" time="0.009"/>
+  <testcase name="whenGiven2FizzBuzzSays2()" classname="fizz_buzz.FizzBuzzTest" time="0.065"/>
+  <testcase name="whenGiven1FizzBuzzSays1()" classname="fizz_buzz.FizzBuzzTest" time="0.007"/>
+  <testcase name="whenGiven6FizzBuzzSays6()" classname="fizz_buzz.FizzBuzzTest" time="0.019"/>
+  <testcase name="whenGiven5FizzBuzzSays5()" classname="fizz_buzz.FizzBuzzTest" time="0.007"/>
+  <testcase name="whenGiven15FizzBuzzSays15()" classname="fizz_buzz.FizzBuzzTest" time="0.025"/>
+  <testcase name="whenGiven4FizzBuzzSays4()" classname="fizz_buzz.FizzBuzzTest" time="0.029"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

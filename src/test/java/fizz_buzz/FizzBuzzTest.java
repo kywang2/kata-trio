@@ -17,31 +17,49 @@ public class FizzBuzzTest {
     @Test
     public void whenGiven1FizzBuzzSays1() {
         FizzBuzz underTest = new FizzBuzz();
-        String spokenWord = underTest.say(1);
+        String spokenWord = underTest.printsFizzOrBuzzOrBoth(1);
         assertThat(spokenWord).isEqualTo("1");
     }
     @Test
     public void whenGiven2FizzBuzzSays2() {
         FizzBuzz underTest = new FizzBuzz();
-        String spokenWord = underTest.say(2);
+        String spokenWord = underTest.printsFizzOrBuzzOrBoth(2);
         assertThat(spokenWord).isEqualTo("2");
     }
     @Test
     public void whenGiven3FizzBuzzSays3() {
         FizzBuzz underTest = new FizzBuzz();
-        String spokenWord = underTest.say(3);
+        String spokenWord = underTest.printsFizzOrBuzzOrBoth(3);
         assertThat(spokenWord).isEqualTo("Fizz");
     }
     @Test
     public void whenGiven4FizzBuzzSays4() {
         FizzBuzz underTest = new FizzBuzz();
-        String spokenWord = underTest.say(4);
+        String spokenWord = underTest.printsFizzOrBuzzOrBoth(4);
         assertThat(spokenWord).isEqualTo("4");
     }
     @Test
     public void whenGiven5FizzBuzzSays5() {
         FizzBuzz underTest = new FizzBuzz();
-        String spokenWord = underTest.say(5);
+        String spokenWord = underTest.printsFizzOrBuzzOrBoth(5);
         assertThat(spokenWord).isEqualTo("Buzz");
+    }
+    @Test
+    public void whenGiven6FizzBuzzSays6() {
+        FizzBuzz underTest = new FizzBuzz();
+        String spokenWord = underTest.printsFizzOrBuzzOrBoth(6);
+        assertThat(spokenWord).isEqualTo("Fizz");
+    }
+    @Test
+    public void whenGiven10FizzBuzzSays10() {
+        FizzBuzz underTest = new FizzBuzz();
+        String spokenWord = underTest.printsFizzOrBuzzOrBoth(10);
+        assertThat(spokenWord).isEqualTo("Buzz");
+    }
+    @Test
+    public void whenGiven15FizzBuzzSays15() {
+        FizzBuzz underTest = new FizzBuzz();
+        String spokenWord = underTest.printsFizzOrBuzzOrBoth(15);
+        assertThat(spokenWord).isEqualTo("FizzBuzz");
     }
 }
