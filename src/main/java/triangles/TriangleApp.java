@@ -15,8 +15,6 @@ public class TriangleApp {
         System.out.println("Enter side C:");
         int sideC = keyboard.nextInt();
         System.out.println(triangleSorter.analyze(sideA, sideB, sideC));
-
-//Game Loop
-
+        
     }
 }
