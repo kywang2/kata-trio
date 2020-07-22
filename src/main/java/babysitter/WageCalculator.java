@@ -1,4 +1,5 @@
 package babysitter;
+
 //Babysitter
 //
 //Today's gig economy is disrupting industries around the world. This kata pays homage to one of the original gig jobs. The goal is to write a method that calculates the pay for a babysitter's shift.

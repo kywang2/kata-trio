@@ -1,7 +1,5 @@
 package triangles;
 
-import fizz_buzz.FizzBuzz;
-
 import java.util.Scanner;
 
 public class TriangleApp {
@@ -15,6 +13,6 @@ public class TriangleApp {
         System.out.println("Enter side C:");
         int sideC = keyboard.nextInt();
         System.out.println(triangleSorter.analyze(sideA, sideB, sideC));
-        
+
     }
 }

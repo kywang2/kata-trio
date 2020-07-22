@@ -1,4 +1,5 @@
 package triangles;
+
 //Triangles
 //
 //        From the Columbus Scala User Group's repo of katas is a simple kata to determine different types of triangles.
@@ -20,19 +21,19 @@ public class TriangleSorter {
             return "Equilateral";
         }
 
-        if ((sideA == sideB && sideB != sideC) || (sideB == sideC && sideB != sideA) || (sideA==sideC && sideA!=sideB)) {
+        if ((sideA == sideB && sideB != sideC) || (sideB == sideC && sideB != sideA) || (sideA == sideC && sideA != sideB)) {
             return "Isosceles";
         }
 
-        if((Math.sqrt(sideA*sideA+sideB*sideB)==(sideC))||(Math.sqrt(sideA*sideA+sideC*sideC)==(sideB))||(Math.sqrt(sideB*sideB+sideC*sideC)==(sideA))) {
+        if ((Math.sqrt(sideA * sideA + sideB * sideB) == (sideC)) || (Math.sqrt(sideA * sideA + sideC * sideC) == (sideB)) || (Math.sqrt(sideB * sideB + sideC * sideC) == (sideA))) {
             return "Right";
         }
 
-        if((sideA+sideB>sideC)&&(sideA+sideC>sideB)&&(sideC+sideB>sideA)){
+        if ((sideA + sideB > sideC) && (sideA + sideC > sideB) && (sideC + sideB > sideA)) {
             return "Still a Triangle, but not one of the three.";
         }
 
-        if((sideA+sideB<=sideC)||(sideA+sideC<=sideB)||(sideC+sideB<=sideA)){
+        if ((sideA + sideB <= sideC) || (sideA + sideC <= sideB) || (sideC + sideB <= sideA)) {
             return "Cannot be made into a triangle.";
         }
 
