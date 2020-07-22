@@ -28,7 +28,7 @@ public class TriangleSorter {
             return "Right";
         }
 
-        if((sideA+sideB>sideC)||(sideA+sideC>sideB)||(sideC+sideB>sideA)){
+        if((sideA+sideB>sideC)&&(sideA+sideC>sideB)&&(sideC+sideB>sideA)){
             return "Still a Triangle, but not one of the three.";
         }
 
