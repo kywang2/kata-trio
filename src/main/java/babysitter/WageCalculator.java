@@ -1,4 +1,5 @@
 package babysitter;
+
 //Variations:
 //Create a minimum wage rule and ensure that the babysitter does not receive pay that
 // falls below the minimum wage for the entire shift. For example a minimum wage of $9:
@@ -8,7 +9,24 @@ package babysitter;
 //In real life just pay the sitter a flat rate. They're taking care of your kids, they deserve it.
 public class WageCalculator {
 
-    public int calculateShiftWage(int startingHour, int endingHour, int bedtime) {
+    public int calculateShiftWage(int startTime, int endTime, int bedtime) {
+
+        if (startTime >= 17) {
+            startTime -= 17;
+        } else if (startTime <= 3) {
+            startTime += 7;
+        }
+        if (bedtime >= 20 && bedtime <= 23) {
+            bedtime -= 17;
+        }
+        if (endTime >= 18) {
+            endTime -= 17;
+        } else if (endTime <= 4) {
+            endTime += 7;
+        }
+
+
         return 0;
+
     }
 }
