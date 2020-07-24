@@ -16,6 +16,6 @@ public class BabySitterApp {
         System.out.println("Bed time:");
         int bedTime = babySitterTimeClock.nextInt();
 
-        wageCalculate.calculateShiftWage(startTime, endTime, bedTime);
+        System.out.println("Total Payment Amount is: " +wageCalculate.calculateShiftWage(startTime, endTime, bedTime));
     }
 }
