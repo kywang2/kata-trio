@@ -23,22 +23,14 @@ public class WageCalculator {
     private int startTime;
     private int endTime;
     private int bedTime;
-    int preBedtimePay = (12 * (bedTime - startTime));
-    int bedtimePay = (8 * (7 - bedTime));
-    int postBedtimePay = (16 * (endTime - 7));
-    int totalPay = preBedtimePay + bedtimePay + postBedtimePay;
-    int totalHours;
-
-    public int getTotalHours() {
-        return totalHours;
-    }
+    private int totalHours;
+    private int preBedtimePay;
+    private int bedtimePay;
+    private int postBedtimePay;
+    private int totalPay;
 
     public int calculateShiftWage(int startTime, int endTime, int bedTime) {
-
-        if (startTime <= 17) {
-            startTime -= 17;
-        }
-        if (startTime >= 18 && startTime <=23) {
+        if (startTime >= 17 && startTime <=24) {
             startTime -= 17;
         } else if (startTime <= 3 && startTime>=0) {
             startTime += 7;
@@ -50,8 +42,19 @@ public class WageCalculator {
             endTime -= 17;
         } else if (endTime <= 4 && endTime>=0) {
             endTime += 7;
+        } if (endTime<bedTime) {
+            totalPay = (endTime - startTime) * 12;
+            return totalPay;
+        } if (endTime<7){
+            totalPay=(12 * (bedTime - startTime))+(8 * (7 - bedTime));
+            return totalPay;
         }
 
-        return totalHours;
+        int preBedtimePay = (12 * (bedTime - startTime));
+        int bedtimePay = (8 * (7 - bedTime));
+        int postBedtimePay = (16 * (endTime - 7));
+        int totalPay = preBedtimePay + bedtimePay + postBedtimePay;
+
+        return totalPay;
 }
 }
