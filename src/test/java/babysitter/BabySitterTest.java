@@ -40,12 +40,14 @@ public class BabySitterTest {
         int wage = underTest.calculateShiftWage(23, 1, 23);
         assertThat(wage).isEqualTo(24);
     }
+
     @Test
     public void preDuringPostBedTime36() {
         WageCalculator underTest = new WageCalculator();
         int wage = underTest.calculateShiftWage(22, 1, 23);
         assertThat(wage).isEqualTo(36);
     }
+
     @Test
     public void returnInvalid() {
         WageCalculator underTest = new WageCalculator();

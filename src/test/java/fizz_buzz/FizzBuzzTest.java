@@ -11,6 +11,7 @@ public class FizzBuzzTest {
         String spokenWord = underTest.printsFizzOrBuzzOrBoth(-1);
         assertThat(spokenWord).isEqualTo("Error");
     }
+
     @Test
     public void whenGiven1FizzBuzzSays1() {
         FizzBuzz underTest = new FizzBuzz();
@@ -66,12 +67,15 @@ public class FizzBuzzTest {
         String spokenWord = underTest.printsFizzOrBuzzOrBoth(20);
         assertThat(spokenWord).isEqualTo("FizzBuzz");
     }
+
     @Test
     public void whenGiven15FizzBuzzSays44() {
         FizzBuzz underTest = new FizzBuzz();
         String spokenWord = underTest.printsFizzOrBuzzOrBoth(44);
         assertThat(spokenWord).isEqualTo("FizzBang");
-    }  @Test
+    }
+
+    @Test
     public void whenGiven15FizzBuzzSays55() {
         FizzBuzz underTest = new FizzBuzz();
         String spokenWord = underTest.printsFizzOrBuzzOrBoth(55);
