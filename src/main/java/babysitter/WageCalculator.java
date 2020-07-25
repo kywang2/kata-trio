@@ -14,7 +14,9 @@ public class WageCalculator {
     private int startTime;
     private int endTime;
     private int bedTime;
-    private int totalHours;
+    private int preBedtimeHours = 0;
+    private int bedtimeHours = 0;
+    private int postBedtimeHours = 0;
     private int preBedtimePay;
     private int bedtimePay;
     private int postBedtimePay;
@@ -39,20 +41,22 @@ public class WageCalculator {
         System.out.println("start time:" + startTime);
         System.out.println("End time:" + endTime);
         System.out.println("Bed time:" + bedTime);
-        if (startTime < 0 || endTime > 11 || startTime > endTime) {
-            System.out.println("Invalid input. This is outside of babysitters hours.");
+        if (startTime < 0 || endTime > 11 || startTime > endTime || bedTime < 3 || bedTime > 7) {
+            System.out.println("Invalid input.");
             return -1;
         } else if (startTime <= bedTime && endTime <= bedTime) {
             System.out.println("Case 1");
-        } else if (startTime >= bedTime && endTime <= bedTime) {
-            System.out.println("case 2");
-        } else if (startTime >= 7) {
-            System.out.println("case 3");
+            preBedtimeHours = endTime - startTime;
         }
+//        } else if (startTime >= bedTime && endTime <= bedTime) {
+//            System.out.println("case 2");
+//        } else if (startTime >= 7) {
+//            System.out.println("case 3");
+//        }
 
-        int preBedtimePay = (12 * (bedTime - startTime));
-        int bedtimePay = (8 * (7 - bedTime));
-        int postBedtimePay = (16 * (endTime - 7));
+        int preBedtimePay = 12 * preBedtimeHours;
+        int bedtimePay = 8 * bedtimeHours;
+        int postBedtimePay = 16 * postBedtimeHours;
         int totalPay = preBedtimePay + bedtimePay + postBedtimePay;
 
         return totalPay;
