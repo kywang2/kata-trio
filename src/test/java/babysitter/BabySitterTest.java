@@ -27,12 +27,12 @@ public class BabySitterTest {
         assertThat(wage).isEqualTo(8);
     }
 
-//    @Test
-//    public void oneHourPreBedAndBedtime20() {
-//        WageCalculator underTest = new WageCalculator();
-//        int wage = underTest.calculateShiftWage(20, 22, 21);
-//        assertThat(wage).isEqualTo(20);
-//    }
+    @Test
+    public void oneHourPreBedAndBedtime20() {
+        WageCalculator underTest = new WageCalculator();
+        int wage = underTest.calculateShiftWage(20, 22, 21);
+        assertThat(wage).isEqualTo(20);
+    }
 
     @Test
     public void oneHourBedTimeAndOneHourPostBedtime24() {

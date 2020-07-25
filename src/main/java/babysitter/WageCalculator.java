@@ -30,7 +30,7 @@ public class WageCalculator {
     private int totalPay;
 
     public int calculateShiftWage(int startTime, int endTime, int bedTime) {
-        if (startTime >= 17 && startTime <=24) {
+        if (startTime >= 17 && startTime <= 24) {
             startTime -= 17;
         } else if (startTime >= 18 && startTime <= 23) {
             startTime -= 17;
@@ -40,21 +40,29 @@ public class WageCalculator {
         if (bedTime >= 20 && bedTime <= 23) {
             bedTime -= 17;
         }
-        if (endTime >= 18 && endTime<=24) {
+        if (endTime >= 18 && endTime <= 24) {
             endTime -= 17;
         } else if (endTime <= 4 && endTime >= 0) {
             endTime += 7;
-        } if (endTime<bedTime) {
+        }
+        if (endTime < bedTime) {
             totalPay = (endTime - startTime) * 12;
             return totalPay;
-        } if (endTime<7){
-            totalPay=(12 * (bedTime - startTime))+(8 * (7 - bedTime));
+        }
+        if (bedTime == startTime) {
+            totalPay = (8 * (endTime - bedTime));
             return totalPay;
-        } if (bedTime<startTime) {
+        }
+        if (endTime < 7) {
+            totalPay = (12 * (bedTime - startTime)) + (8 * (7 - bedTime));
+            return totalPay;
+        }
+        if (bedTime < startTime) {
             totalPay = (16 * (endTime - startTime));
             return totalPay;
-        } if (bedTime==startTime){
-            totalPay=(8*(endTime-bedTime));
+        }
+        if (startTime<7&&bedTime<7&&endTime<7&&startTime < bedTime && bedTime < endTime) {
+            totalPay = (12 * (bedTime - startTime)) + (8 * (endTime - bedTime));
             return totalPay;
         }
 
@@ -64,5 +72,5 @@ public class WageCalculator {
         int totalPay = preBedtimePay + bedtimePay + postBedtimePay;
 
         return totalPay;
-}
+    }
 }
