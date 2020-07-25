@@ -8,16 +8,7 @@ package babysitter;
 //Allow partial hour pay and take start/end times as String arguments.
 //In real life just pay the sitter a flat rate. They're taking care of your kids, they deserve it.
 
-//        if (startTime <= 0) {
-//            return 0;
-//        } else if ((startTime >= 0 || startTime <= 3)&&(endTime>=1||endTime<=3) ) {
-//            return preBedtimePay;
-//        } else if ((startTime >= 3 || startTime <= 7)&&(endTime>=4||endTime<=7) ) {
-//            return bedtimePay;
-//        } else if ((startTime >= 7 || startTime <= 11)&&(endTime>=8||endTime<=11) ) {
-//            return postBedtimePay;
 //
-//        }
 public class WageCalculator {
 
     private int startTime;
@@ -45,23 +36,19 @@ public class WageCalculator {
         } else if (endTime <= 4 && endTime >= 0) {
             endTime += 7;
         }
-        if (endTime < bedTime) {
-            totalPay = (endTime - startTime) * 12;
-            return totalPay;
+        System.out.println("start time:" + startTime);
+        System.out.println("End time:" + endTime);
+        System.out.println("Bed time:" + bedTime);
+        if (startTime < 0 || endTime > 11 || startTime > endTime) {
+            System.out.println("Invalid input. This is outside of babysitters hours.");
+            return -1;
+        } else if (startTime <= bedTime && endTime <= bedTime) {
+            System.out.println("Case 1");
+        } else if (startTime >= bedTime && endTime <= bedTime) {
+            System.out.println("case 2");
+        } else if (startTime >= 7) {
+            System.out.println("case 3");
         }
-        if (bedTime == startTime) {
-            totalPay = (8 * (endTime - bedTime));
-            return totalPay;
-        }
-        if (endTime < 7) {
-            totalPay = (12 * (bedTime - startTime)) + (8 * (7 - bedTime));
-            return totalPay;
-        }
-        if (bedTime < startTime) {
-            totalPay = (16 * (endTime - startTime));
-            return totalPay;
-        }
-
 
         int preBedtimePay = (12 * (bedTime - startTime));
         int bedtimePay = (8 * (7 - bedTime));

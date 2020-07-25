@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="babysitter.BabySitterTest" tests="1" skipped="0" failures="1" errors="0" timestamp="2020-07-25T15:40:11" hostname="WECANCODEIT-70" time="0.438">
+<testsuite name="babysitter.BabySitterTest" tests="1" skipped="0" failures="1" errors="0" timestamp="2020-07-25T17:11:56" hostname="DESKTOP-972ITF1" time="0.132">
   <properties/>
-  <testcase name="oneHourBedTimeAndOneHourPostBedtime24()" classname="babysitter.BabySitterTest" time="0.438">
-    <failure message="org.opentest4j.AssertionFailedError: &#13;&#10;Expecting:&#13;&#10; &lt;16&gt;&#13;&#10;to be equal to:&#13;&#10; &lt;24&gt;&#13;&#10;but was not." type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: 
+  <testcase name="oneHourPreBedTimeShouldPay12()" classname="babysitter.BabySitterTest" time="0.132">
+    <failure message="org.opentest4j.AssertionFailedError: &#13;&#10;Expecting:&#13;&#10; &lt;-28&gt;&#13;&#10;to be equal to:&#13;&#10; &lt;12&gt;&#13;&#10;but was not." type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: 
 Expecting:
- &lt;16&gt;
+ &lt;-28&gt;
 to be equal to:
- &lt;24&gt;
+ &lt;12&gt;
 but was not.
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at babysitter.BabySitterTest.oneHourBedTimeAndOneHourPostBedtime24(BabySitterTest.java:41)
+	at babysitter.BabySitterTest.oneHourPreBedTimeShouldPay12(BabySitterTest.java:13)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -102,6 +102,10 @@ but was not.
 	at java.base/java.lang.Thread.run(Thread.java:834)
 </failure>
   </testcase>
-  <system-out><![CDATA[]]></system-out>
+  <system-out><![CDATA[start time:0
+End time:1
+Bed time:3
+Case 1
+]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
