@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="babysitter.BabySitterTest" tests="1" skipped="0" failures="1" errors="0" timestamp="2020-07-25T15:29:19" hostname="WECANCODEIT-70" time="0.435">
+<testsuite name="babysitter.BabySitterTest" tests="1" skipped="0" failures="1" errors="0" timestamp="2020-07-25T15:40:11" hostname="WECANCODEIT-70" time="0.438">
   <properties/>
-  <testcase name="oneHourPreBedAndBedtime20()" classname="babysitter.BabySitterTest" time="0.435">
-    <failure message="org.opentest4j.AssertionFailedError: &#13;&#10;Expecting:&#13;&#10; &lt;36&gt;&#13;&#10;to be equal to:&#13;&#10; &lt;20&gt;&#13;&#10;but was not." type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: 
+  <testcase name="oneHourBedTimeAndOneHourPostBedtime24()" classname="babysitter.BabySitterTest" time="0.438">
+    <failure message="org.opentest4j.AssertionFailedError: &#13;&#10;Expecting:&#13;&#10; &lt;16&gt;&#13;&#10;to be equal to:&#13;&#10; &lt;24&gt;&#13;&#10;but was not." type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: 
 Expecting:
- &lt;36&gt;
+ &lt;16&gt;
 to be equal to:
- &lt;20&gt;
+ &lt;24&gt;
 but was not.
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at babysitter.BabySitterTest.oneHourPreBedAndBedtime20(BabySitterTest.java:34)
+	at babysitter.BabySitterTest.oneHourBedTimeAndOneHourPostBedtime24(BabySitterTest.java:41)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)

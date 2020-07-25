@@ -61,10 +61,7 @@ public class WageCalculator {
             totalPay = (16 * (endTime - startTime));
             return totalPay;
         }
-        if (startTime<7&&bedTime<7&&endTime<7&&startTime < bedTime && bedTime < endTime) {
-            totalPay = (12 * (bedTime - startTime)) + (8 * (endTime - bedTime));
-            return totalPay;
-        }
+
 
         int preBedtimePay = (12 * (bedTime - startTime));
         int bedtimePay = (8 * (7 - bedTime));
