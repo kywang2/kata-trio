@@ -47,11 +47,13 @@ public class WageCalculator {
         } else if (startTime <= bedTime && endTime <= bedTime) {
             System.out.println("Case 1");
             preBedtimeHours = endTime - startTime;
+        } else if (startTime >= 7) {
+            System.out.println("case 2");
+            postBedtimeHours = endTime - startTime;
         }
-//        } else if (startTime >= bedTime && endTime <= bedTime) {
-//            System.out.println("case 2");
-//        } else if (startTime >= 7) {
+//        else if (startTime >= bedTime && endTime <= bedTime) {
 //            System.out.println("case 3");
+//            bedtimeHours = endTime - startTime;
 //        }
 
         int preBedtimePay = 12 * preBedtimeHours;
