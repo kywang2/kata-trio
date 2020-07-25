@@ -50,11 +50,18 @@ public class WageCalculator {
         } else if (startTime >= 7) {
             System.out.println("case 2");
             postBedtimeHours = endTime - startTime;
+        } else if (startTime >= bedTime && bedTime < 7 && endTime > 7) {
+            System.out.println("case 5");
+            bedtimeHours = 7 - startTime;
+            postBedtimeHours = endTime - 7;
+        } else if (startTime >= bedTime && endTime >= bedTime) {
+            System.out.println("case 3");
+            bedtimeHours = endTime - startTime;
+        } else if (startTime < bedTime && endTime <= 7) {
+            System.out.println("case 4");
+            preBedtimeHours = bedTime - startTime;
+            bedtimeHours = endTime - bedTime;
         }
-//        else if (startTime >= bedTime && endTime <= bedTime) {
-//            System.out.println("case 3");
-//            bedtimeHours = endTime - startTime;
-//        }
 
         int preBedtimePay = 12 * preBedtimeHours;
         int bedtimePay = 8 * bedtimeHours;

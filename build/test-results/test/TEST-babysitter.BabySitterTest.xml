@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="babysitter.BabySitterTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-07-25T17:32:24" hostname="DESKTOP-972ITF1" time="0.139">
+<testsuite name="babysitter.BabySitterTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-07-25T18:07:50" hostname="DESKTOP-972ITF1" time="0.117">
   <properties/>
-  <testcase name="oneHourPreBedTimeShouldPay12()" classname="babysitter.BabySitterTest" time="0.139"/>
-  <system-out><![CDATA[start time:0
-End time:1
-Bed time:3
-Case 1
+  <testcase name="oneHourBedTimeAndOneHourPostBedtime24()" classname="babysitter.BabySitterTest" time="0.117"/>
+  <system-out><![CDATA[start time:6
+End time:8
+Bed time:6
+case 5
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
