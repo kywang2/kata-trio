@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="babysitter.BabySitterTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-07-25T18:15:21" hostname="DESKTOP-972ITF1" time="0.124">
+<testsuite name="babysitter.BabySitterTest" tests="7" skipped="0" failures="0" errors="0" timestamp="2020-07-25T18:17:33" hostname="DESKTOP-972ITF1" time="0.148">
   <properties/>
-  <testcase name="oneHourBedTimeAndOneHourPostBedtime24()" classname="babysitter.BabySitterTest" time="0.124"/>
-  <system-out><![CDATA[start time:6
-End time:8
-Bed time:6
-case 5
+  <testcase name="returnInvalid()" classname="babysitter.BabySitterTest" time="0.132"/>
+  <testcase name="oneHourPreBedTimeShouldPay12()" classname="babysitter.BabySitterTest" time="0.001"/>
+  <testcase name="oneHourAfterMidnightShouldPay16()" classname="babysitter.BabySitterTest" time="0.001"/>
+  <testcase name="oneHourBedTimeShouldPay8()" classname="babysitter.BabySitterTest" time="0.001"/>
+  <testcase name="preDuringPostBedTime36()" classname="babysitter.BabySitterTest" time="0.001"/>
+  <testcase name="oneHourBedTimeAndOneHourPostBedtime24()" classname="babysitter.BabySitterTest" time="0.001"/>
+  <testcase name="oneHourPreBedAndBedtime20()" classname="babysitter.BabySitterTest" time="0.002"/>
+  <system-out><![CDATA[Invalid input.
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

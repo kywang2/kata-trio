@@ -11,16 +11,9 @@ package babysitter;
 //
 public class WageCalculator {
 
-    private int startTime;
-    private int endTime;
-    private int bedTime;
     private int preBedtimeHours = 0;
     private int bedtimeHours = 0;
     private int postBedtimeHours = 0;
-    private int preBedtimePay;
-    private int bedtimePay;
-    private int postBedtimePay;
-    private int totalPay;
 
     public int calculateShiftWage(int startTime, int endTime, int bedTime) {
         if (startTime >= 17 && startTime <= 24) {
@@ -38,31 +31,22 @@ public class WageCalculator {
         } else if (endTime <= 4 && endTime >= 0) {
             endTime += 7;
         }
-        System.out.println("start time:" + startTime);
-        System.out.println("End time:" + endTime);
-        System.out.println("Bed time:" + bedTime);
         if (startTime < 0 || endTime > 11 || startTime > endTime || bedTime < 3 || bedTime > 7) {
             System.out.println("Invalid input.");
             return -1;
         } else if (startTime <= bedTime && endTime <= bedTime) {
-            System.out.println("Case 1");
             preBedtimeHours = endTime - startTime;
         } else if (startTime >= 7) {
-            System.out.println("case 2");
             postBedtimeHours = endTime - startTime;
         } else if (startTime >= bedTime && bedTime < 7 && endTime > 7) {
-            System.out.println("case 5");
             bedtimeHours = 7 - startTime;
             postBedtimeHours = endTime - 7;
         } else if (startTime >= bedTime && endTime >= bedTime) {
-            System.out.println("case 3");
             bedtimeHours = endTime - startTime;
         } else if (startTime < bedTime && endTime <= 7) {
-            System.out.println("case 4");
             preBedtimeHours = bedTime - startTime;
             bedtimeHours = endTime - bedTime;
         } else if (startTime < bedTime && bedTime < 7 && endTime > 7) {
-            System.out.println("case 6");
             preBedtimeHours = bedTime - startTime;
             bedtimeHours = 7 - bedTime;
             postBedtimeHours = endTime - 7;
