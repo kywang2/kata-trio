@@ -7,35 +7,51 @@ package babysitter;
 //With one hour pre-bedtime and one hour pre midnight/post bedtime hours would remain $20.
 //Allow partial hour pay and take start/end times as String arguments.
 //In real life just pay the sitter a flat rate. They're taking care of your kids, they deserve it.
+
+//        if (startTime <= 0) {
+//            return 0;
+//        } else if ((startTime >= 0 || startTime <= 3)&&(endTime>=1||endTime<=3) ) {
+//            return preBedtimePay;
+//        } else if ((startTime >= 3 || startTime <= 7)&&(endTime>=4||endTime<=7) ) {
+//            return bedtimePay;
+//        } else if ((startTime >= 7 || startTime <= 11)&&(endTime>=8||endTime<=11) ) {
+//            return postBedtimePay;
+//
+//        }
 public class WageCalculator {
 
     private int startTime;
     private int endTime;
     private int bedTime;
-    private int paymentAmount;
-    private int paymentAmount2;
-    private int paymentAmount3;
-    private int totalPaymentAmount;
+    int preBedtimePay = (12 * (bedTime - startTime));
+    int bedtimePay = (8 * (7 - bedTime));
+    int postBedtimePay = (16 * (endTime - 7));
+    int totalPay = preBedtimePay + bedtimePay + postBedtimePay;
+    int totalHours;
+
+    public int getTotalHours() {
+        return totalHours;
+    }
 
     public int calculateShiftWage(int startTime, int endTime, int bedTime) {
 
-        if (startTime >= 17) {
+        if (startTime <= 17) {
             startTime -= 17;
-        } else if (startTime <= 3) {
+        }
+        if (startTime >= 18 && startTime <=23) {
+            startTime -= 17;
+        } else if (startTime <= 3 && startTime>=0) {
             startTime += 7;
         }
         if (bedTime >= 20 && bedTime <= 23) {
             bedTime -= 17;
         }
-        if (endTime >= 18) {
+        if (endTime >= 18 && endTime<=24) {
             endTime -= 17;
-        } else if (endTime <= 4) {
+        } else if (endTime <= 4 && endTime>=0) {
             endTime += 7;
         }
-        paymentAmount = (12 * (bedTime - startTime));
-        paymentAmount2 = (8 * (7 - bedTime));
-        paymentAmount3 = (16 * (endTime - 7));
-        totalPaymentAmount = paymentAmount + paymentAmount2 + paymentAmount3;
-        return totalPaymentAmount;
-    }
+
+        return totalHours;
+}
 }

@@ -3,7 +3,7 @@ package babysitter;
 import java.util.Scanner;
 
 public class BabySitterApp {
-
+    private static int totalHours;
 
     public static void main(String[] args) {
         WageCalculator wageCalculate = new WageCalculator();
@@ -15,7 +15,7 @@ public class BabySitterApp {
         int endTime = babySitterTimeClock.nextInt();
         System.out.println("Bed time:");
         int bedTime = babySitterTimeClock.nextInt();
-
+        System.out.println(totalHours);
         System.out.println("Total Payment Amount is: " +wageCalculate.calculateShiftWage(startTime, endTime, bedTime));
     }
 }

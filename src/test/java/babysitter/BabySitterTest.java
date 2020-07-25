@@ -9,7 +9,7 @@ public class BabySitterTest {
     @Test
     public void oneHourPreBedTimeShouldPay12() {
         WageCalculator underTest = new WageCalculator();
-        int wage = underTest.calculateShiftWage(17, 18, 20);
+        int wage = underTest.calculateShiftWage(5, 6, 8);
         assertThat(wage).isEqualTo(12);
     }
 

@@ -4,16 +4,13 @@ import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-
-/**
- * Here are the rules for this kata:
- * <p>
- * -Write a method that takes an integer and returns a string. This represents the act of saying a number.
- * -The string should be the numerical characters that represent the value of the integer that was passed, EXCEPT:
- * -When the integer passed is a multiple of 3, the method should say Fizz.
- * -When the integer passed is a multiple of 5, the method should say Buzz.
- */
 public class FizzBuzzTest {
+    @Test
+    public void whenGivenNeg1FizzBuzzSaysNeg1() {
+        FizzBuzz underTest = new FizzBuzz();
+        String spokenWord = underTest.printsFizzOrBuzzOrBoth(-1);
+        assertThat(spokenWord).isEqualTo("Error");
+    }
     @Test
     public void whenGiven1FizzBuzzSays1() {
         FizzBuzz underTest = new FizzBuzz();
@@ -32,14 +29,14 @@ public class FizzBuzzTest {
     public void whenGiven3FizzBuzzSays3() {
         FizzBuzz underTest = new FizzBuzz();
         String spokenWord = underTest.printsFizzOrBuzzOrBoth(3);
-        assertThat(spokenWord).isEqualTo("Fizz");
+        assertThat(spokenWord).isEqualTo("3");
     }
 
     @Test
     public void whenGiven4FizzBuzzSays4() {
         FizzBuzz underTest = new FizzBuzz();
         String spokenWord = underTest.printsFizzOrBuzzOrBoth(4);
-        assertThat(spokenWord).isEqualTo("4");
+        assertThat(spokenWord).isEqualTo("Fizz");
     }
 
     @Test
@@ -50,9 +47,9 @@ public class FizzBuzzTest {
     }
 
     @Test
-    public void whenGiven6FizzBuzzSays6() {
+    public void whenGiven6FizzBuzzSays8() {
         FizzBuzz underTest = new FizzBuzz();
-        String spokenWord = underTest.printsFizzOrBuzzOrBoth(6);
+        String spokenWord = underTest.printsFizzOrBuzzOrBoth(8);
         assertThat(spokenWord).isEqualTo("Fizz");
     }
 
@@ -64,9 +61,20 @@ public class FizzBuzzTest {
     }
 
     @Test
-    public void whenGiven15FizzBuzzSays15() {
+    public void whenGiven15FizzBuzzSays20() {
         FizzBuzz underTest = new FizzBuzz();
-        String spokenWord = underTest.printsFizzOrBuzzOrBoth(15);
+        String spokenWord = underTest.printsFizzOrBuzzOrBoth(20);
         assertThat(spokenWord).isEqualTo("FizzBuzz");
+    }
+    @Test
+    public void whenGiven15FizzBuzzSays44() {
+        FizzBuzz underTest = new FizzBuzz();
+        String spokenWord = underTest.printsFizzOrBuzzOrBoth(44);
+        assertThat(spokenWord).isEqualTo("FizzBang");
+    }  @Test
+    public void whenGiven15FizzBuzzSays55() {
+        FizzBuzz underTest = new FizzBuzz();
+        String spokenWord = underTest.printsFizzOrBuzzOrBoth(55);
+        assertThat(spokenWord).isEqualTo("BuzzBang");
     }
 }
