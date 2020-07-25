@@ -36,11 +36,10 @@ public class WageCalculator {
     public int calculateShiftWage(int startTime, int endTime, int bedTime) {
 
         if (startTime <= 17) {
+            return 0;
+        } else if (startTime >= 18 && startTime <= 23) {
             startTime -= 17;
-        }
-        if (startTime >= 18 && startTime <=23) {
-            startTime -= 17;
-        } else if (startTime <= 3 && startTime>=0) {
+        } else if (startTime <= 3 && startTime >= 0) {
             startTime += 7;
         }
         if (bedTime >= 20 && bedTime <= 23) {
@@ -48,8 +47,10 @@ public class WageCalculator {
         }
         if (endTime >= 18 && endTime<=24) {
             endTime -= 17;
-        } else if (endTime <= 4 && endTime>=0) {
+        } else if (endTime <= 4 && endTime >= 0) {
             endTime += 7;
+        } else {
+            return 0;
         }
 
         return totalHours;
