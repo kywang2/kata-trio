@@ -81,3 +81,4 @@ You should use military/24 hour format for the start/end times.
 * Allow partial hour pay and take start/end times as String arguments.
 ###### In real life just pay the sitter a flat rate. They're taking care of your kids, they deserve it.
 
+# module-5-kata-trio-dynamicduplet-personal-repo
